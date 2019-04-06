@@ -1,12 +1,12 @@
 from myMath import Geometric
 from myMath import Arithmatic
-from myMath import area
-
+from myMath import Area
 class Mathematic:
 
-    def __init__(self, arithmatic = Arithmatic(), geometric = Geometric()):
+    def __init__(self, arithmatic = Arithmatic(), geometric = Geometric(), area = Area()):
         self._arithmatic = arithmatic
         self._geometrics = geometric
+        self._area = area
         
     @property
     def arithmatic(self):
@@ -16,6 +16,9 @@ class Mathematic:
     def geometric(self):
         return self._geometrics
 
+    @property
+    def area(self);
+        return self._area
     def Add(self, x, y):
         result = self.arithmatic.Addition(x, y)
         print('Sum of two numbers: ' + str(result))
@@ -33,5 +36,5 @@ class Mathematic:
         print('Quotient of two numbers: ' + str(result))
         
     def Area(self, x, y):
-        result = self.geometric.Area(x, y)
+        result = self.area(x, y)
         print('Area of rectangle: ' + str(result))
